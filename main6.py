@@ -1,5 +1,6 @@
 capitalLetters = list("ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ")
 lowercaseLetters = list("йцукенгшщзхъфывапролджэячсмитьбю")
+print("Введите строку")
 string = input(str()) + ' '
 print(string)
 stringArray = list(string)
@@ -22,7 +23,6 @@ for i in range(len(string)):
 maxVowelsWord = ''
 maxVowelsWords = []
 Vowels = list('аоеуэыяию')
-print(Vowels)
 maxVowels = 0
 countVowels = 0
 for i in range(len(newStringArray)):
