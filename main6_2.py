@@ -12,7 +12,6 @@ countNegative = 0
 for i in range(n):
     if SomeArray[i] < 0:
         countNegative += 1
-    else:continue
 print("Количество отрицательных элементов: " + str(countNegative))
 minItem = float("inf")
 indexOfMinItem = 0

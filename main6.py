@@ -1,5 +1,5 @@
-capitalLetters = list("ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ")
-lowercaseLetters = list("йцукенгшщзхъфывапролджэячсмитьбю")
+capitalLetters = list("ЙЦУКЕЁНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ")
+lowercaseLetters = list("йцукеёнгшщзхъфывапролджэячсмитьбю")
 print("Введите строку")
 string = input(str()) + ' '
 print(string)
@@ -22,7 +22,7 @@ for i in range(len(string)):
 
 maxVowelsWord = ''
 maxVowelsWords = []
-Vowels = list('аоеуэыяию')
+Vowels = list('аоеёуэыяию')
 maxVowels = 0
 countVowels = 0
 for i in range(len(newStringArray)):
@@ -34,4 +34,4 @@ for i in range(len(newStringArray)):
             maxVowels = max(maxVowels, countVowels)
     maxVowelsWords.append(maxVowels)
     countVowels = 0
-print(newStringArray[maxVowelsWords.index(maxVowels)])
+print("Строка с наибольшим количеством гласных " + newStringArray[maxVowelsWords.index(maxVowels)])
