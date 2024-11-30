@@ -21,5 +21,5 @@ for i in range(n):
 summa = 0
 for i in range(n):
     for j in range(i, n - 1):
-        summa += matrix[i][j + 1]
+        summa += abs(matrix[i][j + 1])
 print(summa)

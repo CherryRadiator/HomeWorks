@@ -38,6 +38,8 @@ for i in range(m):
             minimalItemRow = i
             minimalItemColumn = j
 
+print(minimalItemRow, minimalItemColumn)
+
 for i in range(m):
     del(matrix[i][minimalItemColumn])
 del(matrix[minimalItemRow])
