@@ -1,27 +1,34 @@
-from math import *
+def RectP(x1, y1, x2, y2):
+    length = abs(float(x2) - float(x1))
+    width = abs(float(y2) - float(y1))
+    P = length * 2 + width * 2
+    return P
 
-def functionHelper(a, b):
-    return sqrt(a**2 + b**2 + sin(a*b)**2)
+def RectS(x1, y1, x2, y2):
+    length = abs(float(x2) - float(x1))
+    width = abs(float(y2) - float(y1))
+    S = length * width
+    return S
+
+def isNumber(variable):
+    while True:
+        inputtedValue = input("Enter value for variable " + str(variable) + ": ")
+        try:
+            number = float(inputtedValue)
+            return number
+        except ValueError:
+            print("The value is wrong")
+            continue
 
 #main
-x = input("Введите x: ")
-while (not(x.isdigit())):
-    x = input("Введите x: ")
-    if x.isdigit():
-        x = float(x)
-        continue
-y = input("Введите y: ")
-while (not(y.isdigit())):
-    y = input("Введите y: ")
-    if y.isdigit():
-        y = float(y)
-        continue
-z = input("Введите z: ")
-while (not(z.isdigit())):
-    z = input("Введите z: ")
-    if z.isdigit():
-        z = float(z)
-        continue
+x1 = "x1"
+x1 = isNumber(x1)
+x2 = "x2"
+x2 = isNumber(x2)
+y1 = "y1"
+y1 = isNumber(y1)
+y2 = "y2"
+y2 = isNumber(y2)
 
-s = functionHelper(x, y) + functionHelper(x, z) + functionHelper(y, z)
-print("Результат: " + str(s))
+print("Perimeter for inputted values: " + str(RectP(x1, y1, x2, y2)))
+print("Area for inputted values: " + str(RectS(x1, y1, x2, y2)))
