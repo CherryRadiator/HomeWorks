@@ -13,6 +13,7 @@ def Combin2(n, k):
     elif 0 < k < n:
         return Combin2(n - 1, k) + Combin2(n - 1, k - 1)
 
+#main
 n = "n"
 n = isNumber(n)
 k = "k"
