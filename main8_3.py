@@ -1,17 +1,20 @@
-def maxDig(n, lastValue=0):
-    string = str(n)
-    array = string.split('')
-    if len(string) == 1:
-        return lastValue
-    if int(array[0]) > lastValue:
-        lastValue = int(array[0])
-        return maxDig(n//10, lastValue)
+def isNumber(variable):
+    while True:
+        inputtedValue = input("Enter value for variable " + str(variable) + ": ")
+        try:
+            number = int(inputtedValue)
+            return number
+        except ValueError:
+            print("The value is wrong")
+            continue
+def Combin2(n, k):
+    if k == 0 or k == n:
+        return 1
+    elif 0 < k < n:
+        return Combin2(n - 1, k) + Combin2(n - 1, k - 1)
 
-#main
-n = input("Введите n: ")
-while not(n.isdigit()):
-    n = input('Введите n: ')
-    if n.isdigit():
-        if int(n) > 1:
-            n = int(n)
-print(maxDig(n))
+n = "n"
+n = isNumber(n)
+k = "k"
+k = isNumber(k)
+print(Combin2(n, k))
