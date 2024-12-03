@@ -2,7 +2,7 @@ import math
 
 def u(x, y): return x - y
 def v(x, y): return x**2 + math.sin(y)
-def F(u, v): return math.e**(u-v) + v
+def F(u, v): return math.exp(u-v) + v
 def isNumber(variable):
     while True:
         inputtedValue = input("Enter value for variable " + str(variable) + ": ")

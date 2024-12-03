@@ -23,10 +23,10 @@ def isNumber(variable):
 #main
 x1 = "x1"
 x1 = isNumber(x1)
-x2 = "x2"
-x2 = isNumber(x2)
 y1 = "y1"
 y1 = isNumber(y1)
+x2 = "x2"
+x2 = isNumber(x2)
 y2 = "y2"
 y2 = isNumber(y2)
 
