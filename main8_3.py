@@ -1,3 +1,4 @@
+alreadyCalculatedData = {(1, 0): 1}
 def isNumber(variable):
     while True:
         inputtedValue = input("Enter value for variable " + str(variable) + ": ")
@@ -7,11 +8,20 @@ def isNumber(variable):
         except ValueError:
             print("The value is wrong")
             continue
+
 def Combin2(n, k):
-    if k == 0 or k == n:
+    if (n, k) in alreadyCalculatedData:
+        return alreadyCalculatedData[(n, k)]
+    elif k == 0 or k == n:
+        alreadyCalculatedData[(n, k)] = 1
         return 1
     elif 0 < k < n:
-        return Combin2(n - 1, k) + Combin2(n - 1, k - 1)
+        result = Combin2(n - 1, k) + Combin2(n - 1, k - 1)
+        alreadyCalculatedData[(n, k)] = result
+        return result
+    if k > n:
+        print("Invalid value")
+        return 0
 
 #main
 while True:
