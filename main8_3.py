@@ -14,8 +14,13 @@ def Combin2(n, k):
         return Combin2(n - 1, k) + Combin2(n - 1, k - 1)
 
 #main
-n = "n"
-n = isNumber(n)
-k = "k"
-k = isNumber(k)
-print(Combin2(n, k))
+while True:
+    character = input("To start the program enter 's', to quit enter any other key: ")
+    if character == 's':
+        n = "n"
+        n = isNumber(n)
+        k = "k"
+        k = isNumber(k)
+        print(Combin2(n, k))
+    else:
+        break
